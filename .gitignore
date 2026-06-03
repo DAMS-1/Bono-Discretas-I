@@ -1,0 +1,14 @@
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# Carpetas de entornos virtuales (si usas uno)
+venv/
+.venv/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Historial de checkpoints de Jupyter
+.ipynb_checkpoints/
