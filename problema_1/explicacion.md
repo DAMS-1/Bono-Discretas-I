@@ -14,7 +14,7 @@ $$P(n, r) = \frac{n!}{(n - r)!}$$
 
 Donde:
 * $n!$ representa el factorial de $n$, es decir, el total de formas de ordenar los $n$ objetos del conjunto completo.
-* $(n-r)!$ representa las permutaciones de los objetos restantes que **no** fueron seleccionados, dividiendo por este valor para "cancelar" las posiciones que no nos interesan.
+* $(n-r)!$ representa las permutaciones de los objetos restantes que no fueron seleccionados, dividiendo por este valor para "cancelar" las posiciones que no nos interesan.
 
 ## 3. Casos Especiales y Validaciones del Modelo
 Implemente las siguientes restricciones para que el modelo tenga sentido y no presente fallas
