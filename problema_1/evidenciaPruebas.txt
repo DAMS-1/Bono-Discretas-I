@@ -1,0 +1,42 @@
+Calculadora general de permutaciones P(n,r)
+1. Calcular una permutación manualmente
+2. Ejecutar los 5 casos de prueba obligatorios (Comparar tiempos)
+3. Salir
+Seleccione una opción (1-3): 2
+A continuación se ejecutaran cinco pruebas con diferentes valores de entrada:
+
+Prueba #1: Caso ejemplo guía
+Entradas: n = 10, r = 3
+Resultado: P(10,3)=720
+Tiempo usando la iteración: 0.00000890 s 
+Tiempo usando la recursión: 0.00000180 s
+
+
+Prueba #2: Caso ejemplo guía
+Entradas: n = 20, r = 5
+Resultado: P(20,5)=1860480
+Tiempo usando la iteración: 0.00000430 s 
+Tiempo usando la recursión: 0.00000260 s
+
+
+Prueba #3: Caso Especial r=n
+Entradas: n = 5, r = 5
+Resultado: P(5,5)=120
+Tiempo usando la iteración: 0.00000170 s 
+Tiempo usando la recursión: 0.00000060 s
+
+
+Prueba #4: Caso Especial r=0
+Entradas: n = 10, r = 0
+Resultado: P(10,0)=1
+Tiempo usando la iteración: 0.00000160 s 
+Tiempo usando la recursión: 0.00000130 s
+
+
+Prueba #5: Caso Especial r>n
+Entradas: n = 5, r = 8
+Caso especial (r>n): P(5, 8)=0
+No se puede ordenar 8 objetos de un conjunto de 5
+Resultado: P(5,8)=0
+Tiempo usando la iteración: 0.00000000 s 
+Tiempo usando la recursión: 0.00000000 s

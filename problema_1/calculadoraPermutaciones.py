@@ -13,11 +13,9 @@ def factorialPorRecursion(n):
 
 def calcularPermutacion(n, r, usarRecursion=False):
     if n<0 or r<0:
-        print("n y r deben ser números enteros no negatvios")
         return None, None
     
     if r>n:
-        print(f"Caso especial (r>n): P({n}, {r})=0\nNo se puede ordenar {r} objetos de un conjunto de {n}")
         return 0, 0
     
     if usarRecursion:
@@ -52,13 +50,15 @@ def ejecutarPruebasAutomaticas():
     for i, (n, r, desc) in enumerate(casosParaPruebas, 1):
         print(f"\nPrueba #{i}: {desc}")
         print(f"Entradas: n = {n}, r = {r}")
+
+        if r>n:
+            print(f"Caso especial (r>n): P({n}, {r}) = 0")
+            print(f"No se pueden ordenar {r} objetos de un conjunto de {n}")
+            print(f"Tiempo usando la iteración: 0.00000000 s \nTiempo usando la recursión: 0.00000000 s\n")
+            continue
         
         resultadoIteracion, tiempoIteracion=calcularPermutacion(n, r, usarRecursion=False) 
-
-        if resultadoIteracion is not None and resultadoIteracion!=0: 
-            _, tiempoRecursion=calcularPermutacion(n,r,usarRecursion=True)
-        else:
-            tiempoRecursion=0.0
+        _, tiempoRecursion=calcularPermutacion(n, r, usarRecursion=True)
 
         print(f"Resultado: P({n},{r})={resultadoIteracion}")
         print(f"Tiempo usando la iteración: {tiempoIteracion:.8f} s \nTiempo usando la recursión: {tiempoRecursion:.8f} s\n")
@@ -76,6 +76,16 @@ def menu():
             try:
                 n=int(input("Ingrese el valor de n (total de elementos): "))
                 r=int(input("Ingrese el valor de r (elementos a ordenar): "))
+
+                if n < 0 or r < 0:
+                    print("Error: n y r deben ser números enteros no negativos.")
+                    continue
+
+                if r > n:
+                    print(f"\nCaso especial (r>n): P({n}, {r}) = 0")
+                    print(f"No se pueden ordenar {r} objetos de un conjunto de {n}")
+                    print(f"⏱️ Tiempo de procesamiento: 0.00000000 segundos")
+                    continue
 
                 while True:
                     print("\nSeleccione el método para realizar el cálculo:")
