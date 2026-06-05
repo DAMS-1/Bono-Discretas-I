@@ -33,8 +33,7 @@ def mostrarTrianguloEstetico(triangulo):
     
     for i, fila in enumerate(triangulo):
         fila_str = " ".join(f"{num:^{ancho_bloque}}" for num in fila)
-        print(f"Fila {i:2d} ➜ {fila_str:^{ancho_total}}")
-    print("\n" + "="*40)
+        print(f"Fila {i:2d} -> {fila_str:^{ancho_total}}")
 
 def menu():
     while True:
@@ -84,7 +83,7 @@ def menu():
                 print(f"➜ C({n}, {n} - {r}) = C({n}, {n-r}) = {resultado_simetrico}")
                 
                 if resultado_formula == resultado_simetrico:
-                    print("¡Identidad verificada con éxito! C(n,r) es exactamente igual a C(n,n-r).")
+                    print("C(n,r) es exactamente igual a C(n,n-r).")
                 else:
                     print("Error en la verificación de la identidad.")
 
@@ -111,7 +110,7 @@ def menu():
                 print("Error: Debe ingresar un número entero válido")
 
         elif opcion == "3":
-            print("¡Gracias por usar la calculadora del Problema 2! Saliendo...")
+            print("Saliendo")
             break
         else:
             print("Opción inválida. Intente de nuevo")
